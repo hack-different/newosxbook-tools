@@ -5,7 +5,7 @@
 #include <sys/errno.h>
 #include <signal.h> // kill(2)
 #include <string.h> 	// strcmp, etc.
-#include "sandbox.h"  	// Mine
+#include "../include/sandbox.h"    // Mine
 #include <dlfcn.h>
 
 

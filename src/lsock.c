@@ -17,7 +17,7 @@
 #include <unistd.h>
 #include <netinet/in.h>
 #include <time.h>
-#include "lsock.h"
+#include "../include/lsock.h"
 #include <ncurses.h>
 
 #include <netdb.h> // GAI

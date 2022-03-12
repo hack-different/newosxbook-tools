@@ -3,8 +3,8 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/stat.h> // fchmod
-#include <sandbox.h>
-#include "sandbox.h" // My sandbox.h
+#include "../include/sandbox.h"
+#include "../include/sandbox.h" // My sandbox.h
 
 typedef int bool;
 #include <dlfcn.h>

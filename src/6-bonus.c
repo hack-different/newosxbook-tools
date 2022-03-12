@@ -26,7 +26,7 @@
 
 typedef unsigned int uint32_t;
 
-#include "dt.h"		   // for DeviceTree
+#include "../include/dt.h"           // for DeviceTree
 
 typedef struct img3 {
     uint32_t          magic;   

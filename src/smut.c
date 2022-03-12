@@ -32,7 +32,7 @@ typedef unsigned long long  UInt64 ;
 const char ver[] =
 	{"@(#) PROGRAM: smut 1.0 \tPROJECT: Jtools"}; // for what(1)
 
-#include "SMBIOS.h" // updated from Apple's SMBIOS project (q.v. http://newosxbook.com/code/listings/SMBIOS.h)
+#include "../include/SMBIOS.h" // updated from Apple's SMBIOS project (q.v. http://newosxbook.com/code/listings/SMBIOS.h)
 
 #define IOKIT	// to unlock device/device_types..
 #include <device/device_types.h> // for io_name, io_string
