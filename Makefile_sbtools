@@ -1,0 +1,21 @@
+
+
+arm64:
+	gcc-arm64 sb.c -DSB459 -lsandbox -o sb.arm64
+	jtool --sign --inplace sb.arm64
+
+sbtool:
+	gcc-arm64 -DSB459 liblaunchd.c sbtool.c -o sbtool.arm64
+	jtool --sign --ent sb.ent --inplace sbtool.arm64
+	gcc-armv7  -DSB459 liblaunchd.c sbtool.c -o sbtool.armv7
+	jtool  --sign  --inplace --ent sb.ent sbtool.armv7
+	gcc liblaunchd.c sbtool.c -o sbtool.x86_64
+	lipo -create -arch arm64 sbtool.arm64 -arch x86_64 sbtool.x86_64 -arch armv7 sbtool.armv7 -o sbtool
+
+sbexec:
+	gcc sandbox_exec.c -o sbexec.x86_64 -lsandbox 
+	gcc-armv7 sandbox_exec.c -o sbexec.armv7 -lsandbox -DSB459
+	jtool --sign --inplace sbexec.armv7
+	gcc-arm64 sandbox_exec.c -o sbexec.arm64 -lsandbox -DSB459
+	jtool --sign --inplace sbexec.arm64
+	lipo -create -arch arm64 sbexec.arm64 -arch x86_64 sbexec.x86_64 -arch armv7 sbexec.armv7 -o sandbox_exec
