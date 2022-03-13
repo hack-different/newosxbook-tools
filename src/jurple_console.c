@@ -42,7 +42,7 @@ struct AMDeviceNotificationCallbackInformation {
 } ;
 
 
-#define  BUFSIZE 128 // This is used by purpleConsole. So I figure I'll use it too.
+#define  BUFSIZE 1024 // This is used by purpleConsole. So I figure I'll use it too.
 
 void doDeviceConnect(void *deviceHandle)
 {
@@ -108,7 +108,7 @@ void doDeviceConnect(void *deviceHandle)
 
 
 
-	memset (buf, '\0', 128); // technically, buf[0] = '\0' is enough
+	memset (buf, '\0', 1024); // technically, buf[0] = '\0' is enough
 
 	while ((rc = AMDServiceConnectionReceive(f,
 					 buf,

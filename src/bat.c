@@ -92,7 +92,6 @@ main (int argc, char **argv)
    	char *powerInfo = getPowerDetails(1);
 
 	if (powerInfo) printf ("%s\n", powerInfo);
-	free(powerInfo);
 	return (0);
 
 
