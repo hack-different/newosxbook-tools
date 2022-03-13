@@ -216,6 +216,12 @@ FOUNDATION:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.
 //Path to a library.
 LAUNCH_SERVICES:FILEPATH=LAUNCH_SERVICES-NOTFOUND
 
+//Path to a library.
+LIBMIS:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/lib/libmis.tbd
+
+//Path to a library.
+MOBILE_DEVICE:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/CoreServices.framework
+
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=/Users/rickmark/Developer/newosxbook-tools/cmake-build-debug
 

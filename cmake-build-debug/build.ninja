@@ -108,8 +108,9 @@ build CMakeFiles/mistool.dir/src/mistool.c.o: C_COMPILER__mistool_Debug /Users/r
 #############################################
 # Link the executable mistool
 
-build mistool: C_EXECUTABLE_LINKER__mistool_Debug CMakeFiles/mistool.dir/src/mistool.c.o
+build mistool: C_EXECUTABLE_LINKER__mistool_Debug CMakeFiles/mistool.dir/src/mistool.c.o | /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/lib/libmis.tbd
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  LINK_LIBRARIES = -framework  CoreFoundation  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/lib/libmis.tbd
   OBJECT_DIR = CMakeFiles/mistool.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -117,261 +118,36 @@ build mistool: C_EXECUTABLE_LINKER__mistool_Debug CMakeFiles/mistool.dir/src/mis
   TARGET_PDB = mistool.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target jurple_console
+# Object build statements for EXECUTABLE target mach_task_for_self
 
 
 #############################################
-# Order-only phony target for jurple_console
+# Order-only phony target for mach_task_for_self
 
-build cmake_object_order_depends_target_jurple_console: phony || CMakeFiles/jurple_console.dir
+build cmake_object_order_depends_target_mach_task_for_self: phony || CMakeFiles/mach_task_for_self.dir
 
-build CMakeFiles/jurple_console.dir/src/jurple_console.c.o: C_COMPILER__jurple_console_Debug /Users/rickmark/Developer/newosxbook-tools/src/jurple_console.c || cmake_object_order_depends_target_jurple_console
-  DEP_FILE = CMakeFiles/jurple_console.dir/src/jurple_console.c.o.d
+build CMakeFiles/mach_task_for_self.dir/src/mach_task_for_self.c.o: C_COMPILER__mach_task_for_self_Debug /Users/rickmark/Developer/newosxbook-tools/src/mach_task_for_self.c || cmake_object_order_depends_target_mach_task_for_self
+  DEP_FILE = CMakeFiles/mach_task_for_self.dir/src/mach_task_for_self.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
   INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
-  OBJECT_DIR = CMakeFiles/jurple_console.dir
-  OBJECT_FILE_DIR = CMakeFiles/jurple_console.dir/src
+  OBJECT_DIR = CMakeFiles/mach_task_for_self.dir
+  OBJECT_FILE_DIR = CMakeFiles/mach_task_for_self.dir/src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target jurple_console
+# Link build statements for EXECUTABLE target mach_task_for_self
 
 
 #############################################
-# Link the executable jurple_console
+# Link the executable mach_task_for_self
 
-build jurple_console: C_EXECUTABLE_LINKER__jurple_console_Debug CMakeFiles/jurple_console.dir/src/jurple_console.c.o
+build mach_task_for_self: C_EXECUTABLE_LINKER__mach_task_for_self_Debug CMakeFiles/mach_task_for_self.dir/src/mach_task_for_self.c.o
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  OBJECT_DIR = CMakeFiles/jurple_console.dir
+  OBJECT_DIR = CMakeFiles/mach_task_for_self.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = jurple_console
-  TARGET_PDB = jurple_console.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target dyld_example
-
-
-#############################################
-# Order-only phony target for dyld_example
-
-build cmake_object_order_depends_target_dyld_example: phony || CMakeFiles/dyld_example.dir
-
-build CMakeFiles/dyld_example.dir/src/dyld_example.c.o: C_COMPILER__dyld_example_Debug /Users/rickmark/Developer/newosxbook-tools/src/dyld_example.c || cmake_object_order_depends_target_dyld_example
-  DEP_FILE = CMakeFiles/dyld_example.dir/src/dyld_example.c.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
-  OBJECT_DIR = CMakeFiles/dyld_example.dir
-  OBJECT_FILE_DIR = CMakeFiles/dyld_example.dir/src
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target dyld_example
-
-
-#############################################
-# Link the executable dyld_example
-
-build dyld_example: C_EXECUTABLE_LINKER__dyld_example_Debug CMakeFiles/dyld_example.dir/src/dyld_example.c.o
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  OBJECT_DIR = CMakeFiles/dyld_example.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = dyld_example
-  TARGET_PDB = dyld_example.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target joker
-
-
-#############################################
-# Order-only phony target for joker
-
-build cmake_object_order_depends_target_joker: phony || CMakeFiles/joker.dir
-
-build CMakeFiles/joker.dir/src/joker.c.o: C_COMPILER__joker_Debug /Users/rickmark/Developer/newosxbook-tools/src/joker.c || cmake_object_order_depends_target_joker
-  DEP_FILE = CMakeFiles/joker.dir/src/joker.c.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
-  OBJECT_DIR = CMakeFiles/joker.dir
-  OBJECT_FILE_DIR = CMakeFiles/joker.dir/src
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target joker
-
-
-#############################################
-# Link the executable joker
-
-build joker: C_EXECUTABLE_LINKER__joker_Debug CMakeFiles/joker.dir/src/joker.c.o
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  OBJECT_DIR = CMakeFiles/joker.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = joker
-  TARGET_PDB = joker.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target kmem
-
-
-#############################################
-# Order-only phony target for kmem
-
-build cmake_object_order_depends_target_kmem: phony || CMakeFiles/kmem.dir
-
-build CMakeFiles/kmem.dir/src/kmem.c.o: C_COMPILER__kmem_Debug /Users/rickmark/Developer/newosxbook-tools/src/kmem.c || cmake_object_order_depends_target_kmem
-  DEP_FILE = CMakeFiles/kmem.dir/src/kmem.c.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
-  OBJECT_DIR = CMakeFiles/kmem.dir
-  OBJECT_FILE_DIR = CMakeFiles/kmem.dir/src
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target kmem
-
-
-#############################################
-# Link the executable kmem
-
-build kmem: C_EXECUTABLE_LINKER__kmem_Debug CMakeFiles/kmem.dir/src/kmem.c.o
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  OBJECT_DIR = CMakeFiles/kmem.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = kmem
-  TARGET_PDB = kmem.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target ioreg
-
-
-#############################################
-# Order-only phony target for ioreg
-
-build cmake_object_order_depends_target_ioreg: phony || CMakeFiles/ioreg.dir
-
-build CMakeFiles/ioreg.dir/src/ioreg.c.o: C_COMPILER__ioreg_Debug /Users/rickmark/Developer/newosxbook-tools/src/ioreg.c || cmake_object_order_depends_target_ioreg
-  DEP_FILE = CMakeFiles/ioreg.dir/src/ioreg.c.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
-  OBJECT_DIR = CMakeFiles/ioreg.dir
-  OBJECT_FILE_DIR = CMakeFiles/ioreg.dir/src
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target ioreg
-
-
-#############################################
-# Link the executable ioreg
-
-build ioreg: C_EXECUTABLE_LINKER__ioreg_Debug CMakeFiles/ioreg.dir/src/ioreg.c.o
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  OBJECT_DIR = CMakeFiles/ioreg.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = ioreg
-  TARGET_PDB = ioreg.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target gcd
-
-
-#############################################
-# Order-only phony target for gcd
-
-build cmake_object_order_depends_target_gcd: phony || CMakeFiles/gcd.dir
-
-build CMakeFiles/gcd.dir/src/gcd.c.o: C_COMPILER__gcd_Debug /Users/rickmark/Developer/newosxbook-tools/src/gcd.c || cmake_object_order_depends_target_gcd
-  DEP_FILE = CMakeFiles/gcd.dir/src/gcd.c.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
-  OBJECT_DIR = CMakeFiles/gcd.dir
-  OBJECT_FILE_DIR = CMakeFiles/gcd.dir/src
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target gcd
-
-
-#############################################
-# Link the executable gcd
-
-build gcd: C_EXECUTABLE_LINKER__gcd_Debug CMakeFiles/gcd.dir/src/gcd.c.o
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  OBJECT_DIR = CMakeFiles/gcd.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = gcd
-  TARGET_PDB = gcd.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target inject
-
-
-#############################################
-# Order-only phony target for inject
-
-build cmake_object_order_depends_target_inject: phony || CMakeFiles/inject.dir
-
-build CMakeFiles/inject.dir/src/inject.c.o: C_COMPILER__inject_Debug /Users/rickmark/Developer/newosxbook-tools/src/inject.c || cmake_object_order_depends_target_inject
-  DEP_FILE = CMakeFiles/inject.dir/src/inject.c.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
-  OBJECT_DIR = CMakeFiles/inject.dir
-  OBJECT_FILE_DIR = CMakeFiles/inject.dir/src
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target inject
-
-
-#############################################
-# Link the executable inject
-
-build inject: C_EXECUTABLE_LINKER__inject_Debug CMakeFiles/inject.dir/src/inject.c.o
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  OBJECT_DIR = CMakeFiles/inject.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = inject
-  TARGET_PDB = inject.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target lsdtrip
-
-
-#############################################
-# Order-only phony target for lsdtrip
-
-build cmake_object_order_depends_target_lsdtrip: phony || CMakeFiles/lsdtrip.dir
-
-build CMakeFiles/lsdtrip.dir/src/lsdtrip.m.o: C_COMPILER__lsdtrip_Debug /Users/rickmark/Developer/newosxbook-tools/src/lsdtrip.m || cmake_object_order_depends_target_lsdtrip
-  DEP_FILE = CMakeFiles/lsdtrip.dir/src/lsdtrip.m.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
-  OBJECT_DIR = CMakeFiles/lsdtrip.dir
-  OBJECT_FILE_DIR = CMakeFiles/lsdtrip.dir/src
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target lsdtrip
-
-
-#############################################
-# Link the executable lsdtrip
-
-build lsdtrip: C_EXECUTABLE_LINKER__lsdtrip_Debug CMakeFiles/lsdtrip.dir/src/lsdtrip.m.o
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  LINK_LIBRARIES = -framework  CoreFoundation  -framework  CoreServices
-  OBJECT_DIR = CMakeFiles/lsdtrip.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = lsdtrip
-  TARGET_PDB = lsdtrip.dbg
+  TARGET_FILE = mach_task_for_self
+  TARGET_PDB = mach_task_for_self.dbg
 
 
 #############################################
@@ -417,36 +193,165 @@ build csops: C_EXECUTABLE_LINKER__csops_Debug CMakeFiles/csops.dir/src/csops.c.o
   TARGET_PDB = csops.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target filemon
+# Object build statements for EXECUTABLE target lstacks
 
 
 #############################################
-# Order-only phony target for filemon
+# Order-only phony target for lstacks
 
-build cmake_object_order_depends_target_filemon: phony || CMakeFiles/filemon.dir
+build cmake_object_order_depends_target_lstacks: phony || CMakeFiles/lstacks.dir
 
-build CMakeFiles/filemon.dir/src/filemon.c.o: C_COMPILER__filemon_Debug /Users/rickmark/Developer/newosxbook-tools/src/filemon.c || cmake_object_order_depends_target_filemon
-  DEP_FILE = CMakeFiles/filemon.dir/src/filemon.c.o.d
+build CMakeFiles/lstacks.dir/src/lstacks.c.o: C_COMPILER__lstacks_Debug /Users/rickmark/Developer/newosxbook-tools/src/lstacks.c || cmake_object_order_depends_target_lstacks
+  DEP_FILE = CMakeFiles/lstacks.dir/src/lstacks.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
   INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
-  OBJECT_DIR = CMakeFiles/filemon.dir
-  OBJECT_FILE_DIR = CMakeFiles/filemon.dir/src
+  OBJECT_DIR = CMakeFiles/lstacks.dir
+  OBJECT_FILE_DIR = CMakeFiles/lstacks.dir/src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target filemon
+# Link build statements for EXECUTABLE target lstacks
 
 
 #############################################
-# Link the executable filemon
+# Link the executable lstacks
 
-build filemon: C_EXECUTABLE_LINKER__filemon_Debug CMakeFiles/filemon.dir/src/filemon.c.o
+build lstacks: C_EXECUTABLE_LINKER__lstacks_Debug CMakeFiles/lstacks.dir/src/lstacks.c.o
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  OBJECT_DIR = CMakeFiles/filemon.dir
+  OBJECT_DIR = CMakeFiles/lstacks.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = filemon
-  TARGET_PDB = filemon.dbg
+  TARGET_FILE = lstacks
+  TARGET_PDB = lstacks.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target kmem
+
+
+#############################################
+# Order-only phony target for kmem
+
+build cmake_object_order_depends_target_kmem: phony || CMakeFiles/kmem.dir
+
+build CMakeFiles/kmem.dir/src/kmem.c.o: C_COMPILER__kmem_Debug /Users/rickmark/Developer/newosxbook-tools/src/kmem.c || cmake_object_order_depends_target_kmem
+  DEP_FILE = CMakeFiles/kmem.dir/src/kmem.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
+  OBJECT_DIR = CMakeFiles/kmem.dir
+  OBJECT_FILE_DIR = CMakeFiles/kmem.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target kmem
+
+
+#############################################
+# Link the executable kmem
+
+build kmem: C_EXECUTABLE_LINKER__kmem_Debug CMakeFiles/kmem.dir/src/kmem.c.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  OBJECT_DIR = CMakeFiles/kmem.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = kmem
+  TARGET_PDB = kmem.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target lsdtrip
+
+
+#############################################
+# Order-only phony target for lsdtrip
+
+build cmake_object_order_depends_target_lsdtrip: phony || CMakeFiles/lsdtrip.dir
+
+build CMakeFiles/lsdtrip.dir/src/lsdtrip.m.o: C_COMPILER__lsdtrip_Debug /Users/rickmark/Developer/newosxbook-tools/src/lsdtrip.m || cmake_object_order_depends_target_lsdtrip
+  DEP_FILE = CMakeFiles/lsdtrip.dir/src/lsdtrip.m.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
+  OBJECT_DIR = CMakeFiles/lsdtrip.dir
+  OBJECT_FILE_DIR = CMakeFiles/lsdtrip.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target lsdtrip
+
+
+#############################################
+# Link the executable lsdtrip
+
+build lsdtrip: C_EXECUTABLE_LINKER__lsdtrip_Debug CMakeFiles/lsdtrip.dir/src/lsdtrip.m.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  LINK_LIBRARIES = -framework  CoreFoundation  -framework  CoreServices
+  OBJECT_DIR = CMakeFiles/lsdtrip.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lsdtrip
+  TARGET_PDB = lsdtrip.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target gcd
+
+
+#############################################
+# Order-only phony target for gcd
+
+build cmake_object_order_depends_target_gcd: phony || CMakeFiles/gcd.dir
+
+build CMakeFiles/gcd.dir/src/gcd.c.o: C_COMPILER__gcd_Debug /Users/rickmark/Developer/newosxbook-tools/src/gcd.c || cmake_object_order_depends_target_gcd
+  DEP_FILE = CMakeFiles/gcd.dir/src/gcd.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
+  OBJECT_DIR = CMakeFiles/gcd.dir
+  OBJECT_FILE_DIR = CMakeFiles/gcd.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target gcd
+
+
+#############################################
+# Link the executable gcd
+
+build gcd: C_EXECUTABLE_LINKER__gcd_Debug CMakeFiles/gcd.dir/src/gcd.c.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  OBJECT_DIR = CMakeFiles/gcd.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = gcd
+  TARGET_PDB = gcd.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target dyld_example
+
+
+#############################################
+# Order-only phony target for dyld_example
+
+build cmake_object_order_depends_target_dyld_example: phony || CMakeFiles/dyld_example.dir
+
+build CMakeFiles/dyld_example.dir/src/dyld_example.c.o: C_COMPILER__dyld_example_Debug /Users/rickmark/Developer/newosxbook-tools/src/dyld_example.c || cmake_object_order_depends_target_dyld_example
+  DEP_FILE = CMakeFiles/dyld_example.dir/src/dyld_example.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
+  OBJECT_DIR = CMakeFiles/dyld_example.dir
+  OBJECT_FILE_DIR = CMakeFiles/dyld_example.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target dyld_example
+
+
+#############################################
+# Link the executable dyld_example
+
+build dyld_example: C_EXECUTABLE_LINKER__dyld_example_Debug CMakeFiles/dyld_example.dir/src/dyld_example.c.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  OBJECT_DIR = CMakeFiles/dyld_example.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = dyld_example
+  TARGET_PDB = dyld_example.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target dtize
@@ -481,6 +386,38 @@ build dtize: C_EXECUTABLE_LINKER__dtize_Debug CMakeFiles/dtize.dir/src/dtize.c.o
   TARGET_PDB = dtize.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target mach_task_for_pid
+
+
+#############################################
+# Order-only phony target for mach_task_for_pid
+
+build cmake_object_order_depends_target_mach_task_for_pid: phony || CMakeFiles/mach_task_for_pid.dir
+
+build CMakeFiles/mach_task_for_pid.dir/src/mach_task_for_pid.c.o: C_COMPILER__mach_task_for_pid_Debug /Users/rickmark/Developer/newosxbook-tools/src/mach_task_for_pid.c || cmake_object_order_depends_target_mach_task_for_pid
+  DEP_FILE = CMakeFiles/mach_task_for_pid.dir/src/mach_task_for_pid.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  INCLUDES = -I/Users/rickmark/Developer/newosxbook-tools/include
+  OBJECT_DIR = CMakeFiles/mach_task_for_pid.dir
+  OBJECT_FILE_DIR = CMakeFiles/mach_task_for_pid.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target mach_task_for_pid
+
+
+#############################################
+# Link the executable mach_task_for_pid
+
+build mach_task_for_pid: C_EXECUTABLE_LINKER__mach_task_for_pid_Debug CMakeFiles/mach_task_for_pid.dir/src/mach_task_for_pid.c.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+  OBJECT_DIR = CMakeFiles/mach_task_for_pid.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = mach_task_for_pid
+  TARGET_PDB = mach_task_for_pid.dbg
+
+# =============================================================================
 # Target aliases.
 
 # =============================================================================
@@ -491,7 +428,7 @@ build dtize: C_EXECUTABLE_LINKER__dtize_Debug CMakeFiles/dtize.dir/src/dtize.c.o
 #############################################
 # Folder: /Users/rickmark/Developer/newosxbook-tools/cmake-build-debug
 
-build all: phony utun mistool jurple_console dyld_example joker kmem ioreg gcd inject lsdtrip csops filemon dtize
+build all: phony utun mistool mach_task_for_self csops lstacks kmem lsdtrip gcd dyld_example dtize mach_task_for_pid
 
 # =============================================================================
 # Built-in targets

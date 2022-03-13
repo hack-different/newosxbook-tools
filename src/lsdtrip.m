@@ -133,26 +133,26 @@ NSObject * fbSvcs;
 #endif
 
 
-void keyDumper (CFStringRef Key, void *Value, void *Nesting)
+void keyDumper (const void* key, const void *Value, void *Nesting)
 {
 	// My own dumper, in simplisting format
-
+    const CFStringRef stringKey = (CFStringRef)key;
 
 	static char buf[1024000]; //big, but not too big - need this for MetaInfo status
 
 
 	CFTypeID valueTypeID = CFGetTypeID(Value);
 
-	if (Key ) { 
+	if (stringKey ) {
 	//CFStringGetCStringPtr may fail, so opt for slow path
-	CFStringGetCString(Key, // theString
+	CFStringGetCString(stringKey, // theString
 			   buf, // buffer 
 			   1024,// CFIndex
 			   kCFStringEncodingUTF8); //CFStringEncoding
 
 	
 	}
-	if (Key &&  valueTypeID != CFArrayGetTypeID()) { 
+	if (stringKey &&  valueTypeID != CFArrayGetTypeID()) {
 	printf("\t%s%s: ", Nesting ? "\t":"", buf);
 
 	}
@@ -447,8 +447,8 @@ dumpApp (NSObject *AppRef, int Verbose)
 #endif
 		
 
-		int  cont = (int)([AppRef performSelector:@selector( isContainerized)]); 
-		int  restricted  = (int)([AppRef performSelector:@selector( isRestricted)]); 
+		id  cont = [AppRef performSelector:@selector( isContainerized)];
+		id  restricted  = [AppRef performSelector:@selector( isRestricted)];
 
 		CFStringAppendFormat(out,
 				     NULL,
