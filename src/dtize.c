@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <stdlib.h>
-
+#include <unistd.h>
+#include <string.h>
+#include <ctype.h>
 
 #define DEV_TREE_PROP_NAME_LEN	32
 #define DEV_TREE_PROP_VALUE_LEN	8192
@@ -20,8 +22,6 @@
  *
  */
 
-typedef unsigned int  uint32_t;
-typedef unsigned long uint64_t;
 
 
 int indent = 0;
@@ -56,7 +56,7 @@ void getDTNode (int fd) {
 	if (devTreePropLenAndFlags > DEV_TREE_PROP_VALUE_LEN)
 	{
 		off_t pos = lseek (fd, 0, SEEK_CUR);
-		fprintf(stderr,"Error: Excessive device tree property len Pos %x (%d > %d)\n",
+		fprintf(stderr,"Error: Excessive device tree property len Pos %llx (%d > %d)\n",
 				pos,
 			devTreePropLenAndFlags , DEV_TREE_PROP_VALUE_LEN);
 		exit(0);
@@ -172,7 +172,7 @@ int main (int argc, char **argv) {
 
 	totalLen <<=8;
 	totalLen = ntohl(totalLen);
-	printf("Device Tree of %ld bytes\n", totalLen);
+	printf("Device Tree of %u bytes\n", totalLen);
 
 	// @TODO: Sanity check for size (vs. fstat)
 	// 	

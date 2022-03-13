@@ -1,7 +1,7 @@
 #include <CoreFoundation/CoreFoundation.h>
 
 
-// Simple example to read battery details
+// Simple example to read battery detailsw
 // Compile: gcc bat.c -o bat -framework IOKit -framework CoreFoundation
 
 /// Power Mgmt Stuff 
