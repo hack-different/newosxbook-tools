@@ -3,3 +3,6 @@
 /cmake-build-release
 /.idea
 /.vscode
+
+# macOS
+.DS_Store
