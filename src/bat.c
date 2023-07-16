@@ -4,20 +4,20 @@
 // Simple example to read battery detailsw
 // Compile: gcc bat.c -o bat -framework IOKit -framework CoreFoundation
 
-/// Power Mgmt Stuff 
+/// Power Mgmt Stuff
 
-// from IOKitUser-755.18.10/ps.subproj/IOPowerSources.h    
+// from IOKitUser-755.18.10/ps.subproj/IOPowerSources.h
 CFTypeRef IOPSCopyPowerSourcesInfo(void);
 CFArrayRef IOPSCopyPowerSourcesList(CFTypeRef blob);
 CFDictionaryRef IOPSGetPowerSourceDescription(CFTypeRef blob, CFTypeRef ps);
 
-void 
+void
 dumpDict (CFDictionaryRef Dict)
 {
 
   // Helper function to just dump a CFDictioary as XML
 
-  CFDataRef xml = CFPropertyListCreateXMLData(kCFAllocatorDefault, (CFPropertyListRef)Dict);
+  CFDataRef xml = CFPropertyListCreateData(kCFAllocatorDefault, (CFPropertyListRef)Dict, kCFPropertyListXMLFormat_v1_0, 0, NULL);
   if (xml) { write(1, CFDataGetBytePtr(xml), CFDataGetLength(xml)); CFRelease(xml); }
 }
 
@@ -30,7 +30,7 @@ getPowerDetails(int Debug)
     CFDictionaryRef         powerSourceInformation;
 
     static char 	    returned[80];
-    
+
     powerInfo = IOPSCopyPowerSourcesInfo();
 
     if(! powerInfo) return ("Error: IOPsCopyPowerSourcesInfo()");
@@ -43,7 +43,7 @@ getPowerDetails(int Debug)
 
     // Should only get one source. But in practice, check for > 0 sources
 
-    if (CFArrayGetCount(powerSourcesList)) 
+    if (CFArrayGetCount(powerSourcesList))
 	{
 		powerSourceInformation = IOPSGetPowerSourceDescription(powerInfo, CFArrayGetValueAtIndex(powerSourcesList, 0));
 
@@ -55,7 +55,7 @@ getPowerDetails(int Debug)
 		CFNumberRef capacityRef = (CFNumberRef)  CFDictionaryGetValue(powerSourceInformation, CFSTR("Current Capacity"));
 		uint32_t    capacity;
 		if ( ! CFNumberGetValue(capacityRef,            // CFNumberRef number,
-				 kCFNumberSInt32Type, // CFNumberType theType, 
+				 kCFNumberSInt32Type, // CFNumberType theType,
 				 &capacity))           // void *valuePtr);
 		   strcat (returned , "Battery: Unknown");
 		else
@@ -63,17 +63,17 @@ getPowerDetails(int Debug)
 
 		CFStringRef psStateRef = (CFStringRef) CFDictionaryGetValue(powerSourceInformation, CFSTR("Power Source State"));
 
-		const char *psState = CFStringGetCStringPtr(psStateRef, // CFStringRef theString, 
+		const char *psState = CFStringGetCStringPtr(psStateRef, // CFStringRef theString,
                                                       kCFStringEncodingMacRoman); //CFStringEncoding encoding);
 
 		if (!psState) sprintf (returned + strlen(returned), " <unknown> ");
 		else sprintf (returned + strlen(returned), " (on %s,", psState);
-	
+
 		CFBooleanRef isCharging = (CFBooleanRef) CFDictionaryGetValue(powerSourceInformation, CFSTR("Is Charging"));
 
-		
+
 		sprintf(returned +strlen(returned), "%sCharging)", (CFBooleanGetValue(isCharging) ? "": " Not "));
-	}	
+	}
 
     CFRelease(powerInfo);
     CFRelease(powerSourcesList);
@@ -84,11 +84,11 @@ getPowerDetails(int Debug)
 /// End Power stuff
 
 
-int 
+int
 main (int argc, char **argv)
 {
- 
-	
+
+
    	char *powerInfo = getPowerDetails(1);
 
 	if (powerInfo) printf ("%s\n", powerInfo);
