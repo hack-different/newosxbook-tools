@@ -17,7 +17,7 @@ dumpDict (CFDictionaryRef Dict)
 
   // Helper function to just dump a CFDictioary as XML
 
-  CFDataRef xml = CFPropertyListCreateXMLData(kCFAllocatorDefault, (CFPropertyListRef)Dict);
+  CFDataRef xml = CFPropertyListCreateData(kCFAllocatorDefault, (CFPropertyListRef)Dict, kCFPropertyListXMLFormat_v1_0, 0, NULL);
   if (xml) { write(1, CFDataGetBytePtr(xml), CFDataGetLength(xml)); CFRelease(xml); }
 }
 
